@@ -1,6 +1,6 @@
 /*
 Author: Rebecka Skog
-Date: 
+Date: 21-09-2025
 */
 body {
     background-color: papayawhip;
@@ -11,10 +11,13 @@ body {
 h1 {
     color: darkred;
     font-style: italic;
+    font-size:xx-large
 }
 
 p {
     color: green;
+    font-family: cursive;
+    font-size: large;
 }
 
 ul {
@@ -27,6 +30,7 @@ ul {
 h2 {
     color: coral;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
 }
 
 ol {
@@ -34,4 +38,9 @@ ol {
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     list-style-type: upper-latin;
+    font-size: medium;
+}
+a{
+    color: red;
+    font-size: large;
 }
