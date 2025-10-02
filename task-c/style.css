@@ -1,0 +1,34 @@
+/*
+Author: Rebecka Skog
+Date: 
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background-color: rgb(240, 210, 197);
+}
+img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px;
+}
+video {
+    margin: 50px;
+}
+audio {
+    margin: 50px;
+}
+h1{
+    font-size: 250%;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+p{
+    font-size: 90%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
