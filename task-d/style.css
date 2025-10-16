@@ -7,7 +7,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 
     background-color: rgb(222, 178, 235);
 }
@@ -20,7 +19,7 @@ body {
 .cursive { font-style: italic;}
 .cursive {margin-top: 50px;}
 
-h1, h2 { font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+h1, h2, h3 { font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
 
 ul {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -28,15 +27,42 @@ ul {
     font-size: x-large;
     list-style-type: square;
 }
+
 h1 {
     color: darkmagenta;
 }
-h2 {
+
+h2, h3 {
     color: rgb(42, 2, 80);
     font-size: xx-large;
 }
-a {
+
+h3 { margin-top: 90px;}
+
+.computer {background-color: rgba(249, 142, 249, 0.546);}
+.computer {font-family: monospace;}
+
+img[alt] {max-width: 100%;
+    margin: 30px;
+}
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+}
+
+a[target] {
     font-size: x-large;
     color: darkblue;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline;
+}
+
+section ol li {
+    color: black;
+    font-size: x-large;
+    list-style-position: inside;
+    padding-right: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    list-style-type: upper-alpha;
 }
