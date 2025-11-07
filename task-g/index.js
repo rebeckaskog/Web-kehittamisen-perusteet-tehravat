@@ -1,6 +1,6 @@
 // index.js
 // Author: Rebecka Skog
-// Date:
+// Date: 7-11-2025
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("FullInfo");
