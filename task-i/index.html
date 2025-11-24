@@ -1,5 +1,5 @@
 <!--
-    Author: Rebecka Skog
+    Author: Rebecka Skog & Viljami Myllyvirta
     Date: 
   -->
 
@@ -8,8 +8,17 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Instrument Rental ?</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Instrument Rental</title>
+  <link rel="icon" type="image/x-icon" href="picture_here.jpeg">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+        .content-auto {
+            content-visibility: auto;
+        }
+    }
+  </style>
 </head>
 
 <body class="bg-white">
@@ -18,12 +27,19 @@
         <div class="container mx-auto flex items-center px-6">
             <hi class="text-2xl font-bold text-orange-950">Rent Instruments</hi>
         </div>
+        <nav aria-label="Primary">
+            <ul>
+            <li><a href="#main">Main</a></li>
+            </ul>
+        </nav>
     </header>
+    <main id="main">
+    <h1>Test</h1>
 
-
+    </main>
     <footer class="bg-orange-800 text-white py-6">
         <div class="container mx-auto text-center">
-            <p>2025 RentInstruments. All rights reserved.</p>
+            <p>2025 Rent Instruments. All rights reserved.</p>
         </div>
     </footer>
 </body>
