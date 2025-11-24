@@ -5,46 +5,56 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Instrument Rental</title>
-    <link rel="icon" type="image/x-icon" href="picture_here.jpeg">
+    <link rel="icon" type="image/x-icon" href="picture_here.jpeg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
-        @layer utilities {
+      @layer utilities {
         .content-auto {
-            content-visibility: auto;
+          content-visibility: auto;
         }
-    }
-  </style>
-</head>
+      }
+    </style>
+  </head>
 
-<body class="bg-white min-h screen flex flex-col">
-
-    <header class="bg-orange-50 shadow">
-        <div class="container mx-auto flex items-center px-6">
-            <hi class="text-2xl font-bold text-orange-950">Rent Instruments</hi>
+  <body class="bg-white min-h screen flex flex-col">
+    <header class="bg-orange-50 shadow py-4">
+      <div class="container mx-auto flex items-center px-6">
+        <h1 class="text-4xl font-bold text-orange-950">Rent Instruments</h1>
+      </div>
+      <nav class="bg-orange-50">
+        <div class="container mx-auto flex justify-end items-center px-6 py-4">
+          <ul class="flex space-x-6">
+            <li>
+              <a href="#main" class="text-orange-950 font-semibold text-xl"
+                >Home</a
+              >
+            </li>
+          </ul>
         </div>
+      </nav>
     </header>
-        <main id="main" class="flex-grow">
-            <nav aria-label="Primary" class="items-center">
-                <ul>
-                    <li><a href="#main">Main</a></li>
-                </ul>
-            </nav>
-            <section class="realtive h-[80vh] bg-[url('images/cello.jpg')] bg-no-repeat bg-left bg-auto">
-            <div class="text-center">
-                <h1 class="text-2xl text-center">Rent instruments today</h1>
-            </div>
-            </section>
-        </main>
-    
+
+    <main id="main" class="flex-grow">
+      <section class="h-[70vh] flex items-center justify-center overflow-hidden pt-5">
+        <div class="flex items-center space-x-8 w-full">
+          <img src="images/cello.jpg" class="h-[70vh] w-4/5 object-contain" alt="Cello"/>
+
+          <div class="w-1/2 text-left">
+            <h1 class="text-2xl">Rent instruments today</h1>
+          </div>
+
+        </div>
+      </section>
+    </main>
 
     <footer class="bg-orange-800 text-white py-6 fixed bottom-0 inset-x-0">
-        <div class="container mx-auto text-center">
-            <p>2025 Rent Instruments. All rights reserved.</p>
-        </div>
+      <div class="container mx-auto text-center">
+        <p>2025 Rent Instruments. All rights reserved.</p>
+      </div>
     </footer>
-</body>
+  </body>
+</html>
