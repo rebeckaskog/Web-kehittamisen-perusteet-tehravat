@@ -1,0 +1,83 @@
+<!--
+    Author: Rebecka Skog & Viljami Myllyvirta
+    Date: 
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Instrument Rental</title>
+  <link rel="icon" type="image/x-icon" href="picture_here.jpeg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+</head>
+
+<body class="bg-white min-h-screen flex flex-col">
+
+  <header class="bg-orange-50 shadow">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-4xl font-bold font-serif text-orange-950">Rent Instruments</h1>
+    </div>
+    <nav>
+      <div class="container mx-auto flex justify-end items-center px-6 mb-4">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="text-orange-950 font-semibold text-xl hover:text-orange-600">Home</a></li>
+          <li><a href="catalogue.html"
+              class="text-orange-950 font-semibold text-xl hover:text-orange-600">Instruments</a></li>
+          <li><a href="rent.html" class="text-orange-950 font-semibold text-xl hover:text-orange-600">Rent</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="flex-grow">
+    <section class="relative isolate min-h-[500px]">
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <video class="w-full h-full object-cover object-center" preload="metadata" autoplay muted loop playsinline
+          poster="images/hero-fallback.jpg">
+          <source src="images/guitarhero_fixed.mp4" type="video/mp4">
+          <source src="images/guitarhero_fixed.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </section>
+
+    <section class="bg-orange-50 py-16">
+
+    </section>
+
+    <section id="instruments" class="bg-orange-50 py-16">
+      <h3 class="text-center text-3xl mb-10 font-semibold text-orange-900">Instruments</h3>
+      
+    </section>
+
+    <section id="" class="bg-orange-50 py-16">
+
+    </section>
+
+    <section class="bg-orange-50 py-16">
+      <div class="container mx-auto px-6">
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="bg-orange-800 text-white py-6 mt-auto">
+    <div class="container mx-auto text-center">
+      <p>2025 Rent Instruments. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
