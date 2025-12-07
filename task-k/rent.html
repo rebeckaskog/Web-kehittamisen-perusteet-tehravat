@@ -40,24 +40,66 @@
   </header>
 
   <main id="main" class="flex-grow">
-    <section class="relative isolate min-h-[500px]">
-      <div class="absolute inset-0 -z-10 overflow-hidden">
-        <div class="absolute inset-0 bg-black/40"></div>
-        <video class="w-full h-full object-cover object-center" preload="metadata" autoplay muted loop playsinline
-          poster="images/hero-fallback.jpg">
-          <source src="images/guitarhero_fixed.mp4" type="video/mp4">
-          <source src="images/guitarhero_fixed.mp4" type="video/mp4">
-        </video>
-      </div>
+    <section class="h-[70vh] flex items-center justify-center overflow-hidden pt-5">
+      <div class="flex items-center space-x-8 w-full">
 
+      </div>
     </section>
 
     <section class="bg-orange-50 py-16">
 
     </section>
 
-    <section id="instruments" class="bg-orange-50 py-16">
-      <h3 class="text-center text-3xl mb-10 font-semibold text-orange-900">Instruments</h3>
+    <section id="form" class="bg-orange-50 py-16">
+      <h1 class="text-center text-3xl mb-10 font-semibold text-orange-900">Fill in the form</h1>
+      <div class="bg-orange-50 p-4 rounded col-span-2">
+
+        <form id="FullInfo" novalidate class="space-y-4">
+          <div class="form-row">
+            <label for="FullName" class="block font-medium">Full Name</label>
+            <input id="FullName" name="Name" type="text" required placeholder="e.g., Jane Doe" class="w-full border border-emerald-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="NameError"></p>
+          </div>
+          
+
+          <div class="form-row">
+            <label for="Email" class="block font-medium">E-mail</label>
+            <input id="Email" name="email" type="email" required placeholder="e.g., Jane.Doe@mail.com" class="w-full border border-emerald-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="EmailError"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="Tel" class="block font-medium">Phone Number</label>
+            <input id="Tel" name="Tel" type="tel" required placeholder="e.g., +358 123456789" class="w-full border border-emerald-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="NumberError"></p>
+          </div>
+
+          <div>
+            <lable for="instruments">Choose instrument</lable>
+            <select name="instruments" id="instruments">
+              <option value="guitar">Guitar</option>
+              <option value="electric guitar">Electric Guitar</option>
+              <option value="violin">Violin</option>
+              <option value="Tuba">Tuba</option>
+              <option value="Cello">Cello</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label class="block font-bold mb-1">I accept the terms and conditions</label>
+            <div class="flex gap-4">
+              <label><input id="Terms" type="checkbox" name="Accept" value="Yes">Yes</label>
+              <lable><input id="Terms" type="checkbox" name="Decline" value="No">No</label>
+            </div>
+          <p class="text-red-500 text-sm font-medium" id="TermsError"></p>
+          </div>
+
+          <div class="flex gap-4">
+            <button id="addRowBtn" type="submit" class="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">Submit</button>
+            <button id="clearBtn" type="reset" class="bg-emerald-300 text-gray-800 px-4 py-2 rounded hover:bg-emerald-400">Clear</button>
+          </div>
+        </form>
+      </div>
       
     </section>
 
