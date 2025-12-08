@@ -42,41 +42,26 @@
   <main id="main" class="flex-grow">
     <section class="h-[70vh] flex items-center justify-center overflow-hidden pt-5">
       <div class="flex items-center space-x-8 w-full">
+        <p class="text-center font-serif text-orange-950 font-medium text-2xl">Welcome to our instrument rental service, where getting started is simple and affordable. First, choose the instrument that inspires you from our wide selection, then fill in the quick rental form with your details, and finally take it home to enjoy making music right away. Whether you're a beginner, a student, or a performer, we make it easy to access high-quality instruments without the upfront cost, so you can focus on playing, practicing, and performing.</p>
 
       </div>
     </section>
 
     <section class="bg-orange-50 py-16">
+      
 
     </section>
 
     <section id="form" class="bg-orange-50 py-16">
       <h1 class="text-center text-3xl mb-10 font-semibold text-orange-900">Fill in the form</h1>
-      <div class="bg-orange-50 p-4 rounded col-span-2">
+      <div class="bg-orange-50 p-9 rounded-lg max-w-lg mx-auto">
 
-        <form id="FullInfo" novalidate class="space-y-4">
-          <div class="form-row">
-            <label for="FullName" class="block font-medium">Full Name</label>
-            <input id="FullName" name="Name" type="text" required placeholder="e.g., Jane Doe" class="w-full border border-emerald-300 rounded px-3 py-2">
-            <p class="text-red-500 text-sm font-medium" id="NameError"></p>
-          </div>
-          
-
-          <div class="form-row">
-            <label for="Email" class="block font-medium">E-mail</label>
-            <input id="Email" name="email" type="email" required placeholder="e.g., Jane.Doe@mail.com" class="w-full border border-emerald-300 rounded px-3 py-2">
-            <p class="text-red-500 text-sm font-medium" id="EmailError"></p>
-          </div>
-
-          <div class="form-row">
-            <label for="Tel" class="block font-medium">Phone Number</label>
-            <input id="Tel" name="Tel" type="tel" required placeholder="e.g., +358 123456789" class="w-full border border-emerald-300 rounded px-3 py-2">
-            <p class="text-red-500 text-sm font-medium" id="NumberError"></p>
-          </div>
+        <form id="FullInfo" novalidate class="space-y-6">
 
           <div>
-            <lable for="instruments">Choose instrument</lable>
-            <select name="instruments" id="instruments">
+            <label for="instruments" class="block font-medium text-orange-900 mb-1 text-lg">Choose instrument</label>
+            <select name="instruments" id="instruments" class="appearance-none w-full border border-orange-300 rounded px-3 py-2 text-gray-500">
+              <option value=" " >-- Select Instrument --</option>
               <option value="guitar">Guitar</option>
               <option value="electric guitar">Electric Guitar</option>
               <option value="violin">Violin</option>
@@ -85,18 +70,61 @@
             </select>
           </div>
 
+          <div>
+            <label for="rentalPeriod" class="block font-medium text-orange-900 mb-1 text-lg">Rental Start Date</label>
+            <input id="rentalStart" name="startDate" type="date" required class="w-full border border-orange-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="RentalstartError"></p>
+          </div>
+
+          <div>
+            <label for="weeks" class="block font-medium text-orange-900 mb-1 text-lg">Rental Duration (Weeks)</label>
+            <input id="weeks" name="weeks" type="number" required placeholder="e.g., 4" class="w-full border border-orange-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="WeeksError"></p>
+          </div>
+
           <div class="form-row">
-            <label class="block font-bold mb-1">I accept the terms and conditions</label>
-            <div class="flex gap-4">
-              <label><input id="Terms" type="checkbox" name="Accept" value="Yes">Yes</label>
-              <lable><input id="Terms" type="checkbox" name="Decline" value="No">No</label>
+            <label for="FullName" class="block font-medium text-orange-900 mb-1 text-lg">Full Name</label>
+            <input id="FullName" name="Name" type="text" required placeholder="e.g., Jane Doe" class="w-full border border-orange-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="NameError"></p>
+          </div>
+          
+
+          <div class="form-row">
+            <label for="Email" class="block font-medium text-orange-900 mb-1 text-lg">E-mail</label>
+            <input id="Email" name="email" type="email" required placeholder="e.g., Jane.Doe@mail.com" class="w-full border border-orange-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="EmailError"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="Tel" class="block font-medium text-orange-900 mb-1 text-lg">Phone Number</label>
+            <input id="Tel" name="Tel" type="tel" required placeholder="e.g., +358 123456789" class="w-full border border-orange-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="NumberError"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="Address" class="block font-medium text-orange-900 mb-1 text-lg">Address</label>
+            <input id="Address" name="Address" type="address" required placeholder="e.g., Music Road 1" class="w-full border border-orange-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="NumberError"></p>
+          </div>
+
+          <div class="form-row">
+            <label class="block font-medium text-orange-900 mb-1 text-lg">I accept the terms and conditions</label>
+            <div class="flex justify-center gap-8">
+              <label>
+                <input id="Terms" type="checkbox" name="Accept" value="Yes" class="w-5 h-5 accent-orange-600 rounded">
+                <span class="ml-2 text-orange-900 text-lg">Yes</span> 
+              </label>
+              <label>
+                <input id="Terms" type="checkbox" name="Accept" value="No" class="w-5 h-5 accent-orange-600 rounded">
+                <span class="ml-2 text-orange-900 text-lg">No</span> 
+              </label>
             </div>
           <p class="text-red-500 text-sm font-medium" id="TermsError"></p>
           </div>
 
-          <div class="flex gap-4">
-            <button id="addRowBtn" type="submit" class="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">Submit</button>
-            <button id="clearBtn" type="reset" class="bg-emerald-300 text-gray-800 px-4 py-2 rounded hover:bg-emerald-400">Clear</button>
+          <div class="flex gap-4 justify-center ">
+            <button id="submit" type="submit" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">Submit</button>
+            <button id="clearBtn" type="reset" class="bg-orange-300 text-gray-800 px-4 py-2 rounded hover:bg-orange-400">Clear</button>
           </div>
         </form>
       </div>
