@@ -47,6 +47,13 @@ document.getElementById("FullInfo").addEventListener("submit", function (e) {
     valid = false;
   }
 
+  // phone number validation
+  const Phone_number = document.getElementById("Tel").value;
+  if (Phone_number.length < 5 || Phone_number.length > 15) {
+    document.getElementById("NumberError").textContent = "Please enter a valid phone number.";
+    valid = false;
+  }
+
   // Terms validation
   const termsAccepted = document.getElementById("Terms").checked;
   if (!termsAccepted) {
@@ -62,40 +69,45 @@ document.getElementById("FullInfo").addEventListener("submit", function (e) {
 function addRealtime(id, errorId, validator) {
   var el = document.getElementById(id);
   if (!el) return;
-  el.addEventListener("input", function() {
+  el.addEventListener("input", function () {
     var msg = validator(el.value);
     document.getElementById(errorId).textContent = msg;
   });
 }
 
-addRealtime("instruments", "InstrumentError", function(v) {
+addRealtime("instruments", "InstrumentError", function (v) {
   return v === "" ? "Please select an instrument." : "";
 });
 
-addRealtime("rentalStart", "RentalstartError", function(v) {
+addRealtime("rentalStart", "RentalstartError", function (v) {
   return v === "" ? "Please enter a rental start date." : "";
 });
 
-addRealtime("weeks", "WeeksError", function(v) {
+addRealtime("weeks", "WeeksError", function (v) {
   return (v === "" || v <= 0) ? "Please enter a valid number of weeks." : "";
 });
 
-addRealtime("FullName", "NameError", function(v) {
+addRealtime("FullName", "NameError", function (v) {
   return v.trim().length < 2 ? "Please enter your full name." : "";
 });
 
-addRealtime("Email", "EmailError", function(v) {
+addRealtime("Email", "EmailError", function (v) {
   var ok = v.indexOf("@") > 0 && v.indexOf(".") > 0;
   return ok ? "" : "Please enter a valid email address.";
 });
 
-addRealtime("Address", "AddressError", function(v) {
+addRealtime("Address", "AddressError", function (v) {
   return v.trim().length < 3 ? "Please enter your address." : "";
+});
+
+addRealtime("Tel", "NumberError", function (v) {
+  const len = v.trim().length;
+  return (len < 5 || len > 15) ? "Please enter a valid phone number." : "";
 });
 
 var terms = document.getElementById("Terms");
 if (terms) {
-  terms.addEventListener("change", function() {
+  terms.addEventListener("change", function () {
     document.getElementById("TermsError").textContent = terms.checked ? "" : "You must accept the terms and conditions.";
   });
 }
