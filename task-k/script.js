@@ -5,7 +5,7 @@ document.getElementById("FullInfo").addEventListener("submit", function (e) {
   document.querySelectorAll("p.text-red-500").forEach(p => p.textContent = "");
 
   // Instrument validation
-  const instrument = document.getElementById("instruments").value;
+  const instrument = document.getElementById("instruments").value.trim();
   if (instrument === "") {
     document.getElementById("InstrumentError").textContent = "Please select an instrument.";
     valid = false;
@@ -33,7 +33,7 @@ document.getElementById("FullInfo").addEventListener("submit", function (e) {
   }
 
   // Email validation
-  const email = document.getElementById("Email").value;
+  const email = document.getElementById("Email").value.trim();
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
     document.getElementById("EmailError").textContent = "Please enter a valid email address.";
@@ -47,8 +47,8 @@ document.getElementById("FullInfo").addEventListener("submit", function (e) {
     valid = false;
   }
 
-  // phone number validation
-  const Phone_number = document.getElementById("Tel").value;
+  // Phone number validation
+  const Phone_number = document.getElementById("Tel").value.trim();
   if (Phone_number.length < 5 || Phone_number.length > 15) {
     document.getElementById("NumberError").textContent = "Please enter a valid phone number.";
     valid = false;
@@ -76,7 +76,7 @@ function addRealtime(id, errorId, validator) {
 }
 
 addRealtime("instruments", "InstrumentError", function (v) {
-  return v === "" ? "Please select an instrument." : "";
+  return v.trim() === "" ? "Please select an instrument." : "";
 });
 
 addRealtime("rentalStart", "RentalstartError", function (v) {
@@ -92,7 +92,7 @@ addRealtime("FullName", "NameError", function (v) {
 });
 
 addRealtime("Email", "EmailError", function (v) {
-  var ok = v.indexOf("@") > 0 && v.indexOf(".") > 0;
+  var ok = v.includes("@") && v.includes(".");
   return ok ? "" : "Please enter a valid email address.";
 });
 
@@ -108,6 +108,8 @@ addRealtime("Tel", "NumberError", function (v) {
 var terms = document.getElementById("Terms");
 if (terms) {
   terms.addEventListener("change", function () {
-    document.getElementById("TermsError").textContent = terms.checked ? "" : "You must accept the terms and conditions.";
+    document.getElementById("TermsError").textContent = terms.checked
+      ? ""
+      : "You must accept the terms and conditions.";
   });
 }
